@@ -1,6 +1,6 @@
 # Node API with TypeScript
 
-Build a Node CLI tool using Typescript, TSC, and Express.
+Build a Node API using Typescript, TSC, and Express.
 
 `npx degit jaymartmedia/templates/node-api-ts my-new-ts-api`
 
