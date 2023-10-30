@@ -12,6 +12,14 @@ Build a Bash CLI tool that accepts flags.
 
 [source](./bash-cli/)
 
+# Node API with TypeScript
+
+Build a Node CLI tool using Typescript, TSC, and Express.
+
+`npx degit jaymartmedia/templates/node-api-ts my-new-ts-api`
+
+[source](./node-api-ts/)
+
 ## Node CLI with Typescript
 
 Build a Node CLI tool using Typescript and TSC.
