@@ -1,6 +1,6 @@
 # Overview
 
-This repo contains templates that can be used to quickly set up a new app
+This repo contains templates that can be used to quickly set up a new app or tool
 
 # Templates
 
