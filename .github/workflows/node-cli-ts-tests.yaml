@@ -4,10 +4,14 @@ jobs:
   node-cli-ts-tests:
     runs-on: ubuntu-latest
     steps:
+      - name: "test echo"
+        run: echo "Here is the output!"
       - name: "ls in default dir"
         run: ls
       - name: "ls in gh workspace"
         run: ls ${{ github.workspace }}
+      - name: "ls echo gh ws"
+        run: echo $(ls ${{ github.workspace }})
       - name: "Change into workspace directory"
         run: cd ${{ github.workspace }}
       - name: "Build script"
