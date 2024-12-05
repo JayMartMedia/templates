@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # Setup
 ERROR="\u001b[31m"

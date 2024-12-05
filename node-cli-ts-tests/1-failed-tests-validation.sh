@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # Expecting to fail to test that pipeline goes red
 
