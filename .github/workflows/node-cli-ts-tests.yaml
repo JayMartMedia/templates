@@ -8,9 +8,9 @@ jobs:
       - name: "test echo"
         run: echo "Here is the output!"
       - name: "ls in default dir"
-        run: ls ..
+        run: ls
       - name: "ls in gh workspace"
-        run: ls ${{ github.workspace }}/..
+        run: ls ${{ github.workspace }}
       - name: "ls in root"
         run: ls /
       - name: "ls -al in root"
