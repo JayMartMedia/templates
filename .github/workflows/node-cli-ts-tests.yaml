@@ -8,6 +8,8 @@ jobs:
         run: ls
       - name: "ls in gh workspace"
         run: ls ${{ github.workspace }}
+      - name: "Change into workspace directory"
+        run: cd ${{ github.workspace }}
       - name: "Build script"
         run: ./node-cli-ts-tests/0-setup.sh
       - name: "Run basic tests"
