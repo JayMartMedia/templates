@@ -9,16 +9,8 @@ jobs:
         run: echo "Here is the output!"
       - name: "ls in default dir"
         run: ls
-      - name: "ls in gh workspace"
-        run: ls ${{ github.workspace }}
-      - name: "ls in root"
-        run: ls /
-      - name: "ls -al in root"
-        run: ls -al /
-      - name: "ls echo gh ws"
-        run: echo $(ls ${{ github.workspace }})
-      - name: "Change into workspace directory"
-        run: cd ${{ github.workspace }}
+      - name: "Make test scripts executable"
+        run: chmod +x ./node-cli-ts-tests/0-setup.sh
       - name: "Build script"
         run: ./node-cli-ts-tests/0-setup.sh
       - name: "Run basic tests"
