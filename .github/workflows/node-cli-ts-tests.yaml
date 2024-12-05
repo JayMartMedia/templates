@@ -10,7 +10,7 @@ jobs:
       - name: "ls in default dir"
         run: ls
       - name: "Make test scripts executable"
-        run: chmod +x ./node-cli-ts-tests/0-setup.sh
+        run: chmod +x ./node-cli-ts-tests/*.sh
       - name: "Build script"
         run: ./node-cli-ts-tests/0-setup.sh
       - name: "Run basic tests"
