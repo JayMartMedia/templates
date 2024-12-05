@@ -10,6 +10,10 @@ jobs:
         run: ls
       - name: "ls in gh workspace"
         run: ls ${{ github.workspace }}
+      - name: "ls in root"
+        run: ls /
+      - name: "ls -al in root"
+        run: ls -al /
       - name: "ls echo gh ws"
         run: echo $(ls ${{ github.workspace }})
       - name: "Change into workspace directory"
