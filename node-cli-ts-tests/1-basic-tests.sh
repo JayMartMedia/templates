@@ -18,7 +18,7 @@ else
     echo -e ${ERROR}FAILED${CLEAR}
     echo "Expected: $EXPECTED_OUTPUT_1"
     echo "Received: $RESULT_1"
-    diff <(echo $EXPECTED_OUTPUT_1) <(echo $RESULT_1)
+    # diff <(echo $EXPECTED_OUTPUT_1) <(echo $RESULT_1)
     exit 1
 fi
 
@@ -35,6 +35,6 @@ else
     echo -e ${ERROR}FAILED${CLEAR}
     echo "Expected: $EXPECTED_OUTPUT_1"
     echo "Received: $RESULT_1"
-    diff <(echo $EXPECTED_OUTPUT_1) <(echo $RESULT_1)
+    # diff <(echo $EXPECTED_OUTPUT_1) <(echo $RESULT_1)
     exit 1
 fi
