@@ -4,6 +4,10 @@ jobs:
   node-cli-ts-tests:
     runs-on: ubuntu-latest
     steps:
+      - name: "ls in default dir"
+        run: ls
+      - name: "ls in gh workspace"
+        run: ls ${{ github.workspace }}
       - name: "Build script"
         run: ./node-cli-ts-tests/0-setup.sh
       - name: "Run basic tests"
