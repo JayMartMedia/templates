@@ -4,6 +4,7 @@ jobs:
   node-cli-ts-tests:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
       - name: "test echo"
         run: echo "Here is the output!"
       - name: "ls in default dir"
