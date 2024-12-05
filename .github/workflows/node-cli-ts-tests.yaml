@@ -1,0 +1,14 @@
+name: Test node-cli-ts
+on: [push]
+jobs:
+  node-cli-ts-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Build script"
+        run: ./node-cli-ts-tests/0-setup.sh
+      - name: "Run basic tests"
+        run: ./node-cli-ts-tests/1-basic-tests.sh
+      - name: "Run failing tests (just to make sure the pipeline fails"
+        run: ./node-cli-ts-tests/1-failed-tests-validation.sh
+      - name: "Report status"
+        run: echo "This job's status is ${{ job.status }}."
