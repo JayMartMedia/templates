@@ -13,7 +13,9 @@ jobs:
         run: chmod +x ./node-cli-ts-tests/*.sh
       - name: "Build script"
         run: ./node-cli-ts-tests/0-setup.sh
-      - name: "Run basic tests"
-        run: ./node-cli-ts-tests/1-basic-tests.sh
+      - name: "Run basic tests for dist script"
+        run: ./node-cli-ts-tests/1-basic-tests-for-dist-script.sh
+      - name: "Run basic tests for ts-node"
+        run: ./node-cli-ts-tests/2-basic-tests-for-ts-node.sh
       - name: "Report status"
         run: echo "This job's status is ${{ job.status }}."
