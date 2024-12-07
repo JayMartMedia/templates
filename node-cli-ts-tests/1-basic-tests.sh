@@ -8,33 +8,50 @@ CLEAR="\u001b[0m"
 # Run some basic tests
 
 echo "Basic test when name is provided as cli arg"
-RESULT_1=$(node node-cli-ts/dist/index.js --name=test)
-EXPECTED_OUTPUT_1="Hello, test"
+RESULT=$(node node-cli-ts/dist/index.js --name=test)
+EXPECTED_RESULT="Hello, test"
 
-if [[ $RESULT_1 == $EXPECTED_OUTPUT_1 ]]
+if [[ $RESULT == $EXPECTED_RESULT ]]
 then
     echo -e ${SUCCESS}PASSED${CLEAR}
 else
     echo -e ${ERROR}FAILED${CLEAR}
-    echo "Expected: $EXPECTED_OUTPUT_1"
-    echo "Received: $RESULT_1"
-    diff <(echo $EXPECTED_OUTPUT_1) <(echo $RESULT_1)
+    echo "Expected: $EXPECTED_RESULT"
+    echo "Received: $RESULT"
+    diff <(echo $EXPECTED_RESULT) <(echo $RESULT)
     exit 1
 fi
 
 echo ==================================================
 
 echo "Basic test when a different name is provided as cli arg"
-RESULT_1=$(node node-cli-ts/dist/index.js --name="world!")
-EXPECTED_OUTPUT_1="Hello, world!"
+RESULT=$(node node-cli-ts/dist/index.js --name="world!")
+EXPECTED_RESULT="Hello, world!"
 
-if [[ $RESULT_1 == $EXPECTED_OUTPUT_1 ]]
+if [[ $RESULT == $EXPECTED_RESULT ]]
 then
     echo -e ${SUCCESS}PASSED${CLEAR}
 else
     echo -e ${ERROR}FAILED${CLEAR}
-    echo "Expected: $EXPECTED_OUTPUT_1"
-    echo "Received: $RESULT_1"
-    diff <(echo $EXPECTED_OUTPUT_1) <(echo $RESULT_1)
+    echo "Expected: $EXPECTED_RESULT"
+    echo "Received: $RESULT"
+    diff <(echo $EXPECTED_RESULT) <(echo $RESULT)
+    exit 1
+fi
+
+echo ==================================================
+
+echo "First line of output file is node shebang"
+RESULT=$(head -n 1 node-cli-ts/dist/index.js)
+EXPECTED_RESULT="#!/usr/bin/env node"
+
+if [[ $RESULT == $EXPECTED_RESULT ]]
+then
+    echo -e ${SUCCESS}PASSED${CLEAR}
+else
+    echo -e ${ERROR}FAILED${CLEAR}
+    echo "Expected: $EXPECTED_RESULT"
+    echo "Received: $RESULT"
+    diff <(echo $EXPECTED_RESULT) <(echo $RESULT)
     exit 1
 fi
