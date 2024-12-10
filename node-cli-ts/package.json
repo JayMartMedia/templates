@@ -9,6 +9,7 @@
     "_comment": "The build command runs TSC to transpile the TS into a temp directory, then uses ncc to combine code into",
     "_comment2": "one minified file, then the temp directory is removed",
     "build": "tsc && ncc build dist-temp/index.js -mq -o dist && rm -rf dist-temp",
+    "build:no-minify": "tsc && ncc build dist-temp/index.js -q -o dist && rm -rf dist-temp",
     "start:built": "node dist/index.js"
   },
   "author": "",
